@@ -1,113 +1,66 @@
-import Image from 'next/image'
+import Characters from "@/components/Characters";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+        <main className=" w-2/3 m-auto justify-center flex flex-col bg-neutral-900 text-slate-100 p-5 gap-2 homepage-main">
+            <h1 className=" font-black text-9xl text-center">MARVALIS</h1>
+            <p className=" text-left font-light text-red-100 text-lg">
+                Welcome to Marvalis, your ultimate portal into the boundless and
+                exhilarating universe of Marvel Comics! Immerse yourself in a
+                captivating realm where iconic characters leap off the pages and
+                into your imagination, where epic stories unfold with every
+                turn, and where the extraordinary becomes the norm. Dive deep
+                into the colorful tapestry of Marvel's rich history, where
+                characters with incredible powers and human struggles come
+                together in a symphony of action, drama, and heroism. Uncover
+                the origins of beloved heroes like Spider-Man, Iron Man, and the
+                X-Men, as well as the enigmatic villains who challenge them at
+                every step. Marvalis isn't just a website; it's a doorway into
+                the thrilling sagas that have defined generations. Explore the
+                cosmic battles that span galaxies, the street-level heroics that
+                keep city streets safe, and the mind-bending alternate realities
+                that push the boundaries of imagination. From the cosmic majesty
+                of the Infinity Gauntlet saga to the gritty realism of
+                Daredevil's Hell's Kitchen, Marvalis has it all. Delve into
+                exclusive character profiles that delve into their strengths,
+                weaknesses, and pivotal moments. Discover the intricate web of
+                interconnected stories that make up the Marvel Universe, where
+                events in one series can have a ripple effect across the entire
+                spectrum. Immerse yourself in the artistry of the comics, from
+                the dynamic panels that capture explosive battles to the
+                emotionally charged moments that tug at your heartstrings.
+                Whether you're a seasoned Marvel veteran or a curious newcomer,
+                Marvalis offers something for everyone. Immerse yourself in the
+                tales of bravery, sacrifice, and personal growth that have
+                captivated audiences for decades. Join us on a journey through
+                the pages of Marvel history and get ready to experience the
+                extraordinary in ways you've never imagined. Your adventure
+                begins here, at Marvalis!
+            </p>
+            <div className="flex w-full gap-1 justify-evenly bg-zinc-950 p-3 ">
+                <Link
+                    href="/characters"
+                    className=" text-red-500 font-semibold uppercase text-lg drop-shadow-[1px_1px_3px_rgba(200,200,200,.5)]">
+                    Characters
+                </Link>
+                <Link
+                    href="/comics"
+                    className=" text-red-500 font-semibold uppercase text-lg drop-shadow-[1px_1px_3px_rgba(200,200,200,.5)]">
+                    Comics
+                </Link>
+                <Link
+                    href="/series"
+                    className=" text-red-500 font-semibold uppercase text-lg drop-shadow-[1px_1px_3px_rgba(200,200,200,.5)]">
+                    Series
+                </Link>
+                <Link
+                    href="/stories"
+                    className=" text-red-500 font-semibold uppercase text-lg drop-shadow-[1px_1px_3px_rgba(200,200,200,.5)]">
+                    Stories
+                </Link>
+            </div>
+        </main>
+    );
 }
