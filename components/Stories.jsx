@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Card from "./StoriesCard";
+import URL from "./URLGen";
 
 function Stories() {
     const [stories, setStories] = useState([]);
     const storieslist = async () => {
-        const res = await fetch(
-            ` https://gateway.marvel.com/v1/public/stories?limit=50&apikey=a8ed3540d87893181e081f06fb2362fb`
-        );
+        const res = await fetch(URL("stories"));
         const data = await res.json();
         console.log(data);
         return data;

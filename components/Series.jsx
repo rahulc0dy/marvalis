@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Card from "./ComicCard";
+import URL from "./URLGen";
 
 function Series() {
     const [series, setSeries] = useState([]);
     const serieslist = async () => {
-        const res = await fetch(
-            ` https://gateway.marvel.com/v1/public/series?limit=50&apikey=a8ed3540d87893181e081f06fb2362fb`
-        );
+        const res = await fetch(URL("series"));
         const data = await res.json();
 
         return data;

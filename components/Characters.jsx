@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Card from "./CharacterCard";
+import URL from "./URLGen";
 
 function Characters() {
+    const url = URL("characters");
     const [characters, setCharacters] = useState([]);
     const characterlist = async () => {
-        const res = await fetch(
-            ` https://gateway.marvel.com/v1/public/characters?limit=50&apikey=a8ed3540d87893181e081f06fb2362fb`
-        );
+        const res = await fetch(url);
         const data = await res.json();
         return data;
     };

@@ -4,11 +4,11 @@ import React from "react";
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between p-2 bg-red-500 text-slate-200 align-middle items-center sticky top-0">
+        <nav className="flex flex-col justify-between p-2 bg-red-500 text-slate-200 align-middle items-center sticky top-0 sm:flex-row">
             <h1 className=" uppercase text-slate-50 font-black text-5xl">
                 Marvalis
             </h1>
-            <div className="flex justify-evenly w-1/5 text-lg">
+            <div className="flex flex-col sm:flex-row justify-evenly w-1/5 text-lg gap-2">
                 <Link href="/characters" className=" shadow-stone-900">
                     Characters
                 </Link>
