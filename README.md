@@ -78,3 +78,5 @@ Start the server
   npm run dev
 ```
 
+## API used 
+[Marvel Developer API](https://developer.marvel.com/)
