@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <main className=" w-2/3 m-auto justify-center flex flex-col bg-neutral-900 text-slate-100 p-5 gap-2 homepage-main">
-            <Link className=" font-black text-9xl text-center" href={"/"}>
+        <main className=" max-w-7xl h-fit m-auto justify-center flex flex-col bg-neutral-900 text-slate-100 p-5 gap-2 homepage-main">
+            <Link className=" font-black text-xl text-center" href={"/"}>
                 MARVALIS
             </Link>
             <p className=" text-left font-light text-red-100 text-lg">
@@ -41,7 +41,7 @@ export default function Home() {
                 ready to experience the extraordinary in ways you&apos;ve never
                 imagined. Your adventure begins here, at Marvalis!
             </p>
-            <div className="flex w-full gap-1 justify-evenly bg-zinc-950 p-3 ">
+            <div className="flex w-full flex-wrap gap-20 justify-evenly bg-zinc-950 p-3">
                 <Link
                     href="/characters"
                     className=" text-red-500 font-semibold uppercase text-lg drop-shadow-[1px_1px_3px_rgba(200,200,200,.5)]">

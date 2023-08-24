@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .homepage-main {
-    height: 80vh;
+    /* height: 80vh; */
     padding-inline: 5%;
     -webkit-clip-path: polygon(
         10% 0,
