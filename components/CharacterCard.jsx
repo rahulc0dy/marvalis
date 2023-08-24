@@ -16,7 +16,9 @@ function Card({ character }) {
                 height={200}
             />
             <h2 className="block pb-1 pt-1 text-lg font-bold">
-                {character.name}
+                <Link href={"/characters/" + character.id}>
+                    {character.name}
+                </Link>
             </h2>
 
             <p className="line-clamp-3 text-ellipsis text-slate-500">
