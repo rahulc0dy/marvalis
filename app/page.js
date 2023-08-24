@@ -5,7 +5,9 @@ import Link from "next/link";
 export default function Home() {
     return (
         <main className=" w-2/3 m-auto justify-center flex flex-col bg-neutral-900 text-slate-100 p-5 gap-2 homepage-main">
-            <h1 className=" font-black text-9xl text-center">MARVALIS</h1>
+            <Link className=" font-black text-9xl text-center" href={"/"}>
+                MARVALIS
+            </Link>
             <p className=" text-left font-light text-red-100 text-lg">
                 Welcome to Marvalis, your ultimate portal into the boundless and
                 exhilarating universe of Marvel Comics! Immerse yourself in a
