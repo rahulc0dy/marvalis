@@ -16,6 +16,9 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <Head>
                 <link rel="icon" href={metadata.icon} />
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="upgrade-insecure-requests"></meta>
             </Head>
             <body
                 className={

@@ -9,7 +9,6 @@ function Comics() {
     const comicslist = async () => {
         const res = await fetch(URL("comics"));
         const data = await res.json();
-        console.log(data);
         return data;
     };
 
