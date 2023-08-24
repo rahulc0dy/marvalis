@@ -5,10 +5,10 @@ import Card from "./CharacterCard";
 import URL from "./URLGen";
 
 function Characters() {
-    const url = URL("characters");
     const [characters, setCharacters] = useState([]);
+    const [offset, setOffset] = useState(0);
     const characterlist = async () => {
-        const res = await fetch(url);
+        const res = await fetch(URL("characters", offset));
         const data = await res.json();
         return data;
     };
@@ -19,7 +19,16 @@ function Characters() {
             setCharacters(charactersFromServer.data.results);
         };
         getCharacters();
-    }, []);
+    }, [offset]);
+
+    const handleNextClick = async () => {
+        const newOffset = offset + 50;
+        setOffset(newOffset); // Update the offset state
+    };
+    const handlePreviousClick = async () => {
+        const newOffset = offset > 50 ? offset - 50 : 0;
+        setOffset(newOffset); // Update the offset state
+    };
 
     return (
         <>
@@ -28,6 +37,18 @@ function Characters() {
                 {characters.map((character) => (
                     <Card key={character.id} character={character} />
                 ))}
+            </div>
+            <div className=" container w-full flex gap-5 justify-center items-center my-5">
+                <button
+                    className="bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+                    onClick={handlePreviousClick}>
+                    Previous
+                </button>
+                <button
+                    className="bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+                    onClick={handleNextClick}>
+                    Next
+                </button>
             </div>
         </>
     );
