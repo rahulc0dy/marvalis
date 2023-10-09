@@ -18,6 +18,7 @@ Whether you're a seasoned Marvel veteran or a curious newcomer, Marvalis offers 
 
  - [Marvel Delveloper Portal](https://developer.marvel.com/)
  - [rahulc0dy](https://github.com/rahulc0dy)
+ - Apurba Maji
 
 
 
