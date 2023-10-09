@@ -39,7 +39,7 @@ For support, email rahulchakraborty337@gmail.com or join our Discord Server.
 
 **Client:** Next,React, Redux, TailwindCSS
 
-**Server:** Next
+**Server:** Next, Vercel
 
 
 
